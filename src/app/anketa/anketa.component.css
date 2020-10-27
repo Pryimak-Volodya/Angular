@@ -1,10 +1,10 @@
-.Allcontent {
+.allContent {
   position:relative;
   margin: 0;
   padding: 0;
   width: 95%;
 }
-#head {
+.headInfo  {
   position: relative;
   float: right;
   width: 60%;
@@ -19,63 +19,76 @@
   top: 50px;
   border: 1px solid black;
 }
-.left50 {
+.centr {
   position: relative;
   display: block;
   width: 50%;
   margin: 10px auto;
 }
-#nameUnit {
-  min-width: 80%;
+input {
+  min-width: 90%;
   border: solid 1px #f2f2f2;
   border-bottom : solid 1px black;
   font-size: 14pt;
 }
-h1 {
+.centr p {
+  font-size: 12pt;
+  margin: 2px;
+}
+.centr h1 {
   margin: 0 auto;
   text-align: center;
 }
-.text span {
+.centr span {
   display: block;
   text-align: center;
   font-size: 14pt;
   font-weight: bold;
 }
 .message {
+  display: block;
+  position: relative;
   width: 50%;
   float: left;
   font-size: 14pt;
   margin: 10px;
 }
-.tabl {
-  display: inline-block;
+.anketaInfo{
+  position: relative;
+  margin: 10px auto;
 }
-table {
-  display: inline-block;
-  width: 49%;
-  height: auto;
-  float: left;
-  margin-bottom: 35px;
+.left{
+float: left;
 }
-td {
-  display: inline-block;
-  width: 250px;
-  background-color: silver;
-  margin: 0;
-  padding: 0;
+.right {
+  float: right;
 }
-.nunmBlock {
+.w_50 {
+  position: relative;
+  width: 50%;
+}
+.numBox {
+  position: relative;
   display: inline-block;
   width: 40px;
-  height: 40px;
   background-color: black;
+}
+.numBox p {
   color: white;
   font-size: 16pt;
   text-align: center;
+  margin: 8px auto;
 }
-span {
+.text {
   display: inline-block;
-  text-align: right;
-  font-size: 14pt;
+  width: 200px;
+  min-height: 39px;
+  background-color: #b6b6b6;
+  border: 1px solid #787878;
 }
-
+.text p {
+  font-size: 14pt;
+  color: black;
+  text-align: right;
+  margin: 9px 4px 0 0;
+}

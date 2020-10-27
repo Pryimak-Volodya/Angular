@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnketaComponent implements OnInit {
 
-  public nameUnit = " ";
+  public nameUnit = '';
 
   constructor() { }
 
