@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { AnketaComponent } from './anketa/anketa.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnketaComponent
   ],
   imports: [
     BrowserModule
