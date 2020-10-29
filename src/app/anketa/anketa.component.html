@@ -9,14 +9,14 @@
     <h1>АНКЕТА</h1>
     <span>отримувача паспорта громадянина України для виїзду за кордон</span>
   </div>
-  <p class="message">Сповіщаю, що підстав, які відповідно до стаття 6Закону України "Про порядок виїзду з України і в'їзду в Україну громадян України" обмежують моє право на виїзд за кордон, немає.</p>
+  <p class="message left">Сповіщаю, що підстав, які відповідно до стаття 6Закону України "Про порядок виїзду з України і в'їзду в Україну громадян України" обмежують моє право на виїзд за кордон, немає.</p>
   <div class="w_50 left">
     <div class="text"><p class="numBox left">1</p><span>Прізвище</span></div>
     <div class="dataInput"><input id="lastName" type="text"></div>
     <div class="text"><span>ім'я та по батькові</span></div>
     <div class="dataInput"><input id="firstName" type="text"></div>
     <div class="text h_80"><span>Колишні</span></div>
-    <div class="text" style="margin-top: 5px"><span>Прізвище</span></div>
+    <div class="text"><span>Прізвище</span></div>
     <div class="dataInput"><input id="lastNameOld" type="text"></div>
     <div class="text"><span>ім'я та по батькові</span></div>
     <div class="dataInput"><input id="firstNameOld" type="text"></div>
@@ -32,20 +32,17 @@
     <div class="text"><span>Строк дії</span></div>
     <div class="dataInput"><input id="dataoff" type="text"></div>
     <div class="text"><span>орган, що видав</span></div>
-    <div class="dataInput"><input id="nameDep" type="text">
-    </div>
+    <div class="dataInput"><input id="nameDep" type="text"></div>
   </div>
-  <div class="w_50 clear" >
+  <div class="w_50 left">
     <div class="text"><p class="numBox left">2</p><span>Ідентивікаційний номер</span></div>
     <div class="dataInput"><input id="ipn" type="text"></div>
   </div>
-  <div class="w_20 left">
-    <div class="text"><p class="numBox left">3</p><span>Стать</span></div>
-    <div class="dataInput"><input id="sex" type="text"></div>
-  </div>
-  <div class="w_auto left">
-    <div class="text"><p class="numBox left">4</p><span>Дата народження</span></div>
-    <div class="dataInput"><input id="dateBorn" type="text"></div>
+  <div class="w_50 right">
+    <div class="text w_20 left"><p class="numBox left">3</p><span>Стать</span></div>
+    <div class="dataInput w_20 left"><input id="sex" type="text"></div>
+    <div class="w_30 text left"><p class="numBox left">4</p><span>Дата народження</span></div>
+    <div class="dataInput w_20 left"><input id="dateBorn" type="text"></div>
   </div>
   <div class="w_50 left">
     <div class="text"><p class="numBox left">5</p><span>держава</span></div>
@@ -78,6 +75,7 @@
     <div class="text"><span>орган, що видав</span></div>
     <div class="dataInput"><input id="nameDepUa" type="text"></div>
   </div>
+
   <div class="w_50 right">
     <div class="text w_auto"><p class="numBox left">12</p><span>Оформлення паспорта для</span></div>
     <div class="text"><span>постійного проживання</span></div>
@@ -86,7 +84,7 @@
     <div class="dataInput"><input id="psFor2" type="text"></div>
   </div>
   <div class="w_50 left">
-    <div class="text w_auto left"><p class="numBox left">7</p><span>Номер запису</span></div>
+    <div class="text w_30 left"><p class="numBox left">7</p><span>Номер запису</span></div>
     <div class="dataInput w_20 left"><input id="numbVizit" type="text"></div>
     <div class="text w_20 left"><span>дата запису</span></div>
     <div class="dataInput w_20 left"><input id="dateVizit" type="text"></div>
@@ -97,8 +95,8 @@
     <div class="dataInput"><input id="dataonSv" type="text"></div>
     <div class="text left"><span>серія</span></div>
     <div class="dataInput w_20 left"><input id="typeSv" type="text"></div>
-    <div class="text w_auto left"><span>номер</span></div>
-    <div class="dataInput w_20 left"><input id="nambSv" type="text"></div>
+    <div class="text left"><span>номер</span></div>
+    <div class="dataInput left"><input id="nambSv" type="text"></div>
   </div>
   <div class="w_50 right" style="margin-top: 100px">
     <div class="text w_auto"><span>До документа вносяться</span></div>
@@ -122,17 +120,18 @@
     <div class="text"><span>будинок</span></div>
     <div class="dataInput"><input id="house" type="text"></div>
   </div>
-  <div class="w_50 right" style="margin-top: 100px">
+  <div class="w_50 right" style="margin-top: 15%">
     <div class="text"><span>Дата заповнення</span></div>
     <div class="dataInput"><input id="dateOf" type="text"></div>
     <div class="text"><span>підпис</span></div>
     <div class="dataInput"><input id="signature" type="text"></div>
   </div>
-  <div class="w_50 clear">
-    <div class="text w_auto left"><p class="numBox left">9</p><span>Домашній телефон</span></div>
-    <div class="dataInput w_20 left"><input id="homePhone" type="text"></div>
-    <div class="text w_20 left"><span>робочий</span></div>
-    <div class="dataInput w_20 left"><input id="workPhone" type="text"></div>
+  <div class="w_50 left">
+    <div class="text left"><p class="numBox left">9</p><span>Домашній телефон</span></div>
+    <div class="dataInput left"><input id="homePhone" type="text"></div>
+    <div class="text left"><span>робочий</span></div>
+    <div class="dataInput left"><input id="workPhone" type="text"></div>
   </div>
-  <footer></footer>
 </div>
+
+

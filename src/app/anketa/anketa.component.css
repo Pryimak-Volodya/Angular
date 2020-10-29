@@ -1,8 +1,9 @@
 .allContent {
   position:relative;
-  margin: 20px;
+  margin: 10px auto;
   padding: 0;
-  width: 95%;
+  width: 1280px;
+  box-sizing: border-box;
 }
 .headInfo  {
   position: relative;
@@ -21,14 +22,13 @@
 }
 .centr {
   position: relative;
-  display: block;
   width: 50%;
   margin: 10px auto;
 }
 .centr input {
   min-width: 90%;
   border:#f2f2f2;
-  border-bottom : solid 1px black;
+  border-bottom : 1px solid black;
   font-size: 14pt;
 }
 .centr p {
@@ -49,9 +49,15 @@
   display: block;
   position: relative;
   width: 50%;
-  float: left;
   font-size: 14pt;
   margin: 10px;
+}
+.w_50 {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin: 10px 0;
 }
 .left{
   float: left;
@@ -59,25 +65,11 @@
 .right {
   float: right;
 }
-.clear {
+.clearright {
+  clear: right;
+}
+.clearleft {
   clear: left;
-}
-.w_50 {
-  position: relative;
-  display: block;
-  width: 50%;
-  margin: 10px 0;
-}
-.numBox {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: black;
-  color: white;
-  font-size: 16pt;
-  text-align: center;
-  margin: 0;
 }
 .text {
   display: inline-block;
@@ -93,10 +85,23 @@
   font-size: 14pt;
   margin-right: 5px;
 }
-.right .w_auto span{
-  font-weight: bold;
+.w_auto span {
+  display: inline-block;
   top: 0;
-  right: 20%;
+  margin: 0 15%;
+  float: left;
+  font-weight: bold;
+}
+.numBox {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 16pt;
+  text-align: center;
+  margin: 0;
 }
 .dataInput {
   position: relative;
@@ -113,6 +118,7 @@
   border-bottom: solid 1px black;
   font-size: 14pt;
   margin-left: 5px;
+  outline-style: none;
 }
 .h_80 span, .h_120 span, .h_200 span {
   top: 0;
@@ -147,18 +153,19 @@
   margin: 0;
   text-align: center;
 }
+.w_30 {
+  position: relative;
+  display: block;
+  width: 30%;
+}
 .w_20 {
   position: relative;
   display: block;
-  width: 19%;
+  width: 20%;
 }
 .w_auto {
   position: relative;
   display: block;
   width: auto;
 }
-footer {
-  position: relative;
-  width: 100%;
-  height: 50px;
-}
+
