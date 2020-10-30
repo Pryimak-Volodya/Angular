@@ -4,7 +4,7 @@
     <img src="#" alt="foto">
   </div>
   <div [class]="boxCentr">
-    <label for="nameUnit"></label><input id="nameUnit" type="text"/>
+    <input [id]="inputUnit.id" type="text"/>
     <p>(найменування підрозділу  служби громадянства, іміграції та реєстрації фізичних осіб)</p>
     <h1>АНКЕТА</h1>
     <span>отримувача паспорта громадянина України для виїзду за кордон</span>
@@ -12,21 +12,21 @@
   <p [class]="message">Сповіщаю, що підстав, які відповідно до стаття 6Закону України "Про порядок виїзду з України і в'їзду в Україну громадян України" обмежують моє право на виїзд за кордон, немає.</p>
   <div [class]="boxLeft">
     <div [class]="boxSpan"><p [class]="boxNumb">1</p><span>Прізвище</span></div>
-    <div [class]="boxInput"><input id="lastName" type="text"/></div>
+    <div [class]="boxInput"><input [id]="inputsNames[0].id" type="text"/></div>
     <div [class]="boxSpan"><span>ім'я та по батькові</span></div>
-    <div [class]="boxInput"><input id="firstName" type="text"></div>
-    <div class="text h_80"><span>Колишні</span></div>
+    <div [class]="boxInput"><input [id]="inputsNames[1].id" type="text"></div>
+    <div [class]="boxSpan" class="h_80"><span>Колишні</span></div>
     <div [class]="boxSpan"><span>Прізвище</span></div>
-    <div [class]="boxInput"><input id="lastNameOld" type="text"></div>
+    <div [class]="boxInput"><input [id]="inputsOldNames[0].id" type="text"></div>
     <div [class]="boxSpan"><span>ім'я та по батькові</span></div>
-    <div [class]="boxInput"><input id="firstNameOld" type="text"></div>
+    <div [class]="boxInput"><input [id]="inputsOldNames[1].id" type="text"></div>
   </div>
   <div [class]="boxRight">
     <div [class]="boxSpan20"><p [class]="boxNumb">10</p><span>тип</span></div>
     <div [class]="boxInput20"><input id="typeps" type="text"></div>
     <div [class]="boxSpan20"><span>номер</span></div>
     <div [class]="boxInputAuto"><input id="numbps" type="number"></div>
-    <div class="text h_120"><span>Раніше виданий паспорт</span></div>
+    <div [class]="boxSpan" class="h_120"><span>Раніше виданий паспорт</span></div>
     <div [class]="boxSpan"><span>дата видачі</span></div>
     <div [class]="boxInput"><input id="dataon" type="date"></div>
     <div [class]="boxSpan"><span>Строк дії</span></div>
@@ -42,18 +42,18 @@
     <div [class]="boxSpan20"><p [class]="boxNumb">3</p><span>Стать</span></div>
     <div [class]="boxInputAuto">
       <select id="sex">
-        <option> Виберіль стать</option>
+        <option>Виберіль стать</option>
         <option>Чоловік</option>
         <option>Жінка</option>
       </select>
     </div>
-    <div class="w_30 text left"><p [class]="boxNumb">4</p><span>Дата народження</span></div>
+    <div [class]="boxSpan30"><p [class]="boxNumb">4</p><span>Дата народження</span></div>
     <div [class]="boxInput20"><input id="dateBorn" type="date"></div>
   </div>
   <div [class]="boxLeft">
     <div [class]="boxSpan"><p [class]="boxNumb">5</p><span>держава</span></div>
     <div [class]="boxInput"><input id="countriName" type="text"></div>
-    <div class="text h_120"><span>Місце народження</span></div>
+    <div [class]="boxSpan" class="h_120"><span>Місце народження</span></div>
     <div [class]="boxSpan"><span>область</span></div>
     <div [class]="boxInput"><input id="areaName" type="text"></div>
     <div [class]="boxSpan"><span>район/місто</span></div>
@@ -62,20 +62,20 @@
     <div [class]="boxInput"><input id="vilageName" type="text"></div>
   </div>
   <div [class]="boxRight">
-    <div class="text w_auto"><p [class]="boxNumb">11</p><span>Останні п'ять років з відомостями,<br>що становлять державну таємницю,</span></div>
+    <div [class]="boxSpanAuto"><p [class]="boxNumb">11</p><span>Останні п'ять років з відомостями,<br>що становлять державну таємницю,</span></div>
     <div [class]="boxSpan"><span>обізнаний</span></div>
-    <div [class]="boxInput"><input id="aware" type="text"></div>
+    <div [class]="boxInput"><input id="aware" type="checkbox" [disabled]="checkOff"></div>
     <div [class]="boxSpan"><span>був обізнаний</span></div>
-    <div [class]="boxInput"><input id="wasawere" type="text"></div>
+    <div [class]="boxInput"><input id="wasawere" type="checkbox" [disabled]="checkOff"></div>
     <div [class]="boxSpan"><span>не обізнаний і не був обізнаний</span></div>
-    <div [class]="boxInput"><input id="nowasawere" type="text"></div>
+    <div [class]="boxInput"><input id="nowasawere" type="checkbox" [disabled]="checkOff"></div>
   </div>
   <div [class]="boxLeft">
     <div [class]="boxSpan20"><p [class]="boxNumb">6</p><span>серія</span></div>
     <div [class]="boxInput20"><input id="typepsUa" type="text"></div>
     <div [class]="boxSpan20"><span>номер</span></div>
     <div [class]="boxInputAuto"><input id="numbpsUa" type="number"></div>
-    <div class="text h_80"><span style="font-size: small">Паспорт громадянина України</span></div>
+    <div [class]="boxSpan" class="h_80"><span style="font-size: small">Паспорт громадянина України</span></div>
     <div [class]="boxSpan"><span>дата видачі</span></div>
     <div [class]="boxInput"><input id="dataonUa" type="date"></div>
     <div [class]="boxSpan"><span>орган, що видав</span></div>
@@ -83,38 +83,38 @@
   </div>
 
   <div [class]="boxRight">
-    <div class="text w_auto"><p [class]="boxNumb">12</p><span>Оформлення паспорта для</span></div>
+    <div [class]="boxSpanAuto"><p [class]="boxNumb">12</p><span>Оформлення паспорта для</span></div>
     <div [class]="boxSpan"><span>постійного проживання</span></div>
-    <div [class]="boxInput"><input id="psFor" type="text"></div>
+    <div [class]="boxInput"><input id="psFor" type="checkbox" [disabled]="checkOff"></div>
     <div [class]="boxSpan"><span>тимчасових поїздок</span></div>
-    <div [class]="boxInput"><input id="psFor2" type="text"></div>
+    <div [class]="boxInput"><input id="psFor2" type="checkbox" [disabled]="checkOff"></div>
   </div>
   <div [class]="boxLeft">
     <div [class]="boxSpan30"><p [class]="boxNumb">7</p><span>Номер запису</span></div>
     <div [class]="boxInput20"><input id="numbVizit" type="number"></div>
     <div [class]="boxSpan20"><span>дата запису</span></div>
     <div [class]="boxInput20"><input id="dateVizit" type="date"></div>
-    <div class="text h_120"><span style="font-size: small">Свідоцтво про народження (для осіб віком до 16 років)</span></div>
+    <div [class]="boxSpan" class="h_120"><span style="font-size: small">Свідоцтво про народження (для осіб віком до 16 років)</span></div>
     <div [class]="boxSpan"><span>орган що видав</span></div>
     <div [class]="boxInput"><input id="nameDepSv" type="text"></div>
     <div [class]="boxSpan"><span>дата видачі</span></div>
     <div [class]="boxInput"><input id="dataonSv" type="date"></div>
-    <div class="text left"><span>серія</span></div>
+    <div [class]="boxSpan" class="left"><span>серія</span></div>
     <div [class]="boxInput20"><input id="typeSv" type="text"></div>
     <div class="text left"><span>номер</span></div>
     <div [class]="boxInput"><input id="nambSv" type="number"></div>
   </div>
   <div [class]="boxRight" style="margin-top: 100px">
-    <div class="text w_auto"><span>До документа вносяться</span></div>
+    <div [class]="boxSpanAuto"><span>До документа вносяться</span></div>
     <div [class]="boxSpan"><span>Прізвище</span></div>
-    <div [class]="boxInput"><input id="lastNameDoc" type="text"></div>
+    <div [class]="boxInput"><input [id]="inputNameDate.id" type="text"></div>
     <div [class]="boxSpan"><span>ім'я</span></div>
     <div [class]="boxInput"><input id="firsNameDoc" type="text"></div>
   </div>
   <div [class]="boxLeft">
     <div [class]="boxSpan"><p [class]="boxNumb">8</p><span>Поштовий індекс</span></div>
     <div [class]="boxInput"><input id="index" type="number"></div>
-    <div class="text h_200"><span>Місце проживання</span></div>
+    <div [class]="boxSpan" class="h_200"><span>Місце проживання</span></div>
     <div [class]="boxSpan"><span>область</span></div>
     <div [class]="boxInput"><input id="area" type="text"></div>
     <div [class]="boxSpan"><span>район/місто</span></div>

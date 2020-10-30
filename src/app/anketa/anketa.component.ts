@@ -18,11 +18,24 @@ export class AnketaComponent implements OnInit {
   public boxSpan = 'text';
   public boxSpan20 = 'text w_20 left';
   public boxSpan30 = 'text w_30 left';
+  public boxSpanAuto = 'text w_auto';
   public boxInput = 'dataInput';
   public boxInput20 = 'dataInput w_20 left';
   public boxInputAuto = 'dataInput w_auto left';
+  /* Checkeds*/
+  public checkOff = false;
+  /* Inputs*/
+  public inputUnit = {id: 'nameUnit', value: '..'};
+  public inputsNames = [
+    { id: 'lastName', value: '..'},
+    { id: 'firstName', value: '..'}
+  ];
+  public inputsOldNames = [
+    { id: 'lastNameOld', value: '..'},
+    { id: 'firstNameOld', value: '..'}
+  ];
+  public inputNameDate = {id: 'lastNameDoc'};
   constructor() { }
-
   ngOnInit(): void {
   }
 
