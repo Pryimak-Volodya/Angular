@@ -167,6 +167,9 @@
   position: relative;
   display: block;
   width: auto;
-
+}
+select {
+  font-size: 12pt;
+  margin-top: 15%;
 }
 
