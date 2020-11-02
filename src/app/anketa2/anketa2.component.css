@@ -1,0 +1,95 @@
+.allContent {
+    position:relative;
+    margin: 10px auto;
+    padding: 0;
+    width: 1024px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+  }
+.headbox {
+    position: relative;
+    width: 100%;
+    padding: 0 10px 10px 20px;
+    border: 1px solid black;
+    font-size: 14pt;
+   
+  }
+.headbox input {
+    margin-left: 30px;
+}
+.headbox label{
+    margin-left: 5px;
+}
+.srartColor {
+    color: red;
+}
+.checkColor {
+    color: green;
+}
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+}
+#dayData {
+    display: block;
+    float: right;
+    margin-left: 10px;
+    border: #f2f2f2;
+    border-bottom: 1px solid black;
+    outline-style: none;
+    font-size: 14pt;
+}
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: normal;
+}
+b {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.infoContent p {
+    display: block;
+    font-size: 16pt;
+    text-align: center;
+    margin-top: 40px;
+}
+.punkt1, .punkt2, .punkt3, .punkt4, .punkt5, .punkt6 {
+    position: relative;
+    margin: 15px auto;
+    font-size: 14pt;
+    font-weight: bold; 
+}
+.punkt1 label, .punkt4 label, .punkt5 label, .punkt6 label {
+    color: darkcyan;
+    font-weight: normal;
+    font-style: italic;
+    margin: 15px;
+}
+label span {
+    color: darkgoldenrod;
+    margin-left: 5px;
+}
+.punkt2 label, .punkt3 label {
+    color: black;
+    font-weight: normal;
+    font-style: italic;
+    margin: 15px;
+}
+#second2 {
+    margin-left: 100px;
+}
+.punkt3 input {
+    display: inline-block;
+    margin: 15px 0 0 25px ;
+}
+#coment {
+    border: #f2f2f2;
+    border-bottom: solid 1px black;
+    font-size: 14pt;
+    margin-left: 5px;
+    outline-style: none;
+    margin-top: 20px;
+}
