@@ -1,16 +1,11 @@
 <div [class]="content">
     <div [class]="boxHead">
         <P >Клієнт відвідува:</P>
-        <input [id]="buroCheck.id" type="checkbox" (change)="onCheck($event)" [disabled]="buroCheck.isOff" />
-          <label [class]="srartColor" [for]="buroCheck.id">Бюро</label>
-        <input [id]="frontCheck.id" type="checkbox" (click)="onCheck($event)" [disabled]="frontCheck.isOff"/>
-          <label [class]="srartColor" for="frontCheck.id">Фронт офіс МЦ</label>
-        <input [id]="predCheck.id" type="checkbox" (click)="onCheck($event)" [disabled]="predCheck.isOff"/>
-          <label [class]="srartColor" for="predCheck.id">Відділ представництва</label>
-        <input [id]="orgaCheck.id" type="checkbox" (click)="onCheck($event)" [disabled]="orgaCheck.isOff"/>
-          <label [class]="srartColor" for="orgaCheck.id">Відділ оранізації надання БВПД</label>
-        <input [id]="otherCheck.id" type="checkbox" (click)="onCheck($event)" [disabled]="otherCheck.isOff"/>
-          <label [class]="srartColor" for="otherCheck.id">Інше керівництво</label>
+        <input [id]="buroCheck.id" type="checkbox" (change)="onCheckColor($event)" [disabled]="buroCheck.isOff" /><label [class]="srartColor" [for]="buroCheck.id">Бюро</label>
+        <input [id]="frontCheck.id" type="checkbox" (click)="onCheckColor($event)" [disabled]="frontCheck.isOff"/><label [class]="srartColor" for="frontCheck.id">Фронт офіс МЦ</label>
+        <input [id]="predCheck.id" type="checkbox" (click)="onCheckColor($event)" [disabled]="predCheck.isOff"/><label [class]="srartColor" for="predCheck.id">Відділ представництва</label>
+        <input [id]="orgaCheck.id" type="checkbox" (click)="onCheckColor($event)" [disabled]="orgaCheck.isOff"/><label [class]="srartColor" for="orgaCheck.id">Відділ оранізації надання БВПД</label>
+        <input [id]="otherCheck.id" type="checkbox" (click)="onCheckColor($event)" [disabled]="otherCheck.isOff"/><label [class]="srartColor" for="otherCheck.id">Інше керівництво</label>
     </div>
     <div [class]="infoContent">
         <h1>Анкета</h1>
@@ -18,18 +13,18 @@
         <input [id]="dayData.id" type="date" >
         <p>***</p>
     </div>
-    <div [class]="punkt1">
+    <div [class]="punkt1.class">
         <p>1. Чи вперше Ви звертаєтеся до нашого ценру?</p>
-        <input [id]="first[0].id" type="checkbox" (click)="onCheckPunkt($event)"/><label [for]="first[0].id">Так, вперше<span>(перехід до питання 4)</span></label>
-        <input [id]="first[1].id" type="checkbox"/><label [for]="first[1].id">Так, але раніше звертався до іншого центру системи БПД</label>
+        <input [id]="first[0].id" type="checkbox" (click)="onCheckPunkt1($event)"/><label [for]="first[0].id">Так, вперше<span>(перехід до питання 4)</span></label>
+        <input [id]="first[1].id" type="checkbox" (click)="onCheckPunkt2($event)"/><label [for]="first[1].id">Так, але раніше звертався до іншого центру системи БПД</label>
         <input [id]="first[2].id" type="checkbox"/><label [for]="first[2].id">Ні, не вперше</label>
     </div>
-    <div [class]="punkt2" [style.display]="statusBlock">
+    <div [class]="punkt2.class" [style.display]="punkt2.statusBlock">
         <p>2. Якщо не вперше, чи Ви звертаєтеся з того свмого питання?</p>
-        <input [id]="second[0].id" type="checkbox"/><label [for]="second[0].id">Так</label>
-        <input [id]="second[1].id" type="checkbox"/><label [for]="second[1].id">Ні, маю нове питання (перехід до запитання 4)</label>
+        <input [id]="second[0].id" type="checkbox" (click)="onCheckPunkt3($event)"/><label [for]="second[0].id">Так</label>
+        <input [id]="second[1].id" type="checkbox"(click)="onCheckPunkt1($event)"/><label [for]="second[1].id">Ні, маю нове питання (перехід до запитання 4)</label>
     </div>
-    <div [class]="punkt3">
+    <div [class]="punkt3.class" [style.display]="punkt3.statusBlock">
         <p>3. Якщо ваша відповідь "так", то з чим це пов'язано:</p>
         <input [id]="third[0].id" type="checkbox"/><label [for]="third[0].id">Забув дещо / потрібно уточнити інформації</label><br>
         <input [id]="third[1].id" type="checkbox"/><label [for]="third[1].id">Потрібно принести документи</label><br>
@@ -37,7 +32,9 @@
         <input [id]="third[3].id" type="checkbox"/><label [for]="third[3].id">Мені призначено зустріч у центрі з адвокатом</label><br>
         <input [id]="third[4].id" type="checkbox"/><label [for]="third[4].id">Інше (вкажіть, будь ласка)...................................... .</label>
     </div>
-    <div [class]="punkt4">
+    <br>
+    <br>
+    <div [class]="punkt4.class" [style.display]="punkt4.statusBlock">
         <p>4. Наскільки легко Вам було потрапити до нашого ценрту?</p>
         <input [id]="fourth[0].id" type="checkbox"/><label [for]="fourth[0].id">Легко (доступно)</label>
         <input [id]="fourth[1].id" type="checkbox"/><label [for]="fourth[1].id">Скоріше легко, ніж ні</label>
@@ -45,7 +42,7 @@
         <input [id]="fourth[3].id" type="checkbox"/><label [for]="fourth[3].id">Складно</label><br>
         <label [for]="coment.id">Прокоментуйте, будь ласка, свою відповідь</label><input [id]="coment.id" type="text"/>
     </div>
-    <div [class]="punkt5">
+    <div [class]="punkt5.class" [style.display]="punkt5.statusBlock">
         <p>5. Оцініть, будь ласка, якою мірою Ви загалом задоволені обслуговуванням у нашому центрі</p>
         <input [id]="fifth[0].id" type="checkbox"/><label [for]="fifth[0].id">Дуже задоволений</label>
         <input [id]="fifth[1].id" type="checkbox"/><label [for]="fifth[1].id">Задоволений</label>
@@ -53,7 +50,7 @@
         <input [id]="fifth[3].id" type="checkbox"/><label [for]="fifth[3].id">Не задоволений</label>
         <input [id]="fifth[4].id" type="checkbox"/><label [for]="fifth[4].id">Вкрай не задоволений</label>
     </div>
-    <div [class]="punkt6">
+    <div [class]="punkt6.class" [style.display]="punkt6.statusBlock">
         <p>6. Чи було для Вас корисним відвідуванні центру?</p>
         <input [id]="sixth[0].id" type="checkbox"/><label [for]="sixth[0].id">Так</label>
         <input [id]="sixth[1].id" type="checkbox"/><label [for]="sixth[1].id">Скоріше так, ніж ні</label>
