@@ -7,70 +7,87 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./anketa2.component.css']
 })
 export class Anketa2Component implements OnInit {
-  public content ='allContent';
+  public content = 'allContent';
   public boxHead = 'headbox';
   public infoContent = 'infoContent';
-  public buroCheck = {id: 'buro', isOff: false, value:''};
-  public frontCheck = {id: 'front', isOff: false, value:''};
-  public predCheck = {id: 'pred', isOff: false, value:''};
-  public orgaCheck = {id: 'orga', isOff: false, value:''};
-  public otherCheck = {id: 'other', isOff: false, value:''};
+  public question = 'question';
+  public buroCheck = {id: 'buro', isOff: false};
+  public frontCheck = {id: 'front', isOff: false};
+  public predCheck = {id: 'pred', isOff: false};
+  public orgaCheck = {id: 'orga', isOff: false};
+  public otherCheck = {id: 'other', isOff: false};
   public dayData = {id: 'dayData'};
-  public punkt1 = {class:'punkt1'};
-  public punkt2 = {class:'punkt2', statusBlock: 'none'};
-  public punkt3 = {class:'punkt3', statusBlock: 'none'};
-  public punkt4 = {class:'punkt4', statusBlock: 'none'};
-  public punkt5 = {class:'punkt5', statusBlock: 'block'};
-  public punkt6 = {class:'punkt6', statusBlock: 'block'};
+  public punkt1 = {class: 'punkt1', statusBlock: false};
+  public punkt2 = {class: 'punkt2', statusBlock: false};
+  public punkt3 = {class: 'punkt3', statusBlock: false};
+  public punkt4 = {class: 'punkt4', statusBlock: false};
+  public punkt5 = {class: 'punkt5', statusBlock: false};
+  public punkt6 = {class: 'punkt6', statusBlock: false};
   public first = [
-    {id:'first1'},
-    {id:'first2'},
-    {id:'first3'}
+    {id: 'first1'},
+    {id: 'first2'},
+    {id: 'first3'}
   ];
   public second = [
-    {id:'second1'},
-    {id:'second2'}
+    {id: 'second1'},
+    {id: 'second2'}
   ];
   public third = [
-    {id:'third1'},
-    {id:'third2'},
-    {id:'third3'},
-    {id:'third4'},
-    {id:'third5'}
+    {id: 'third1'},
+    {id: 'third2'},
+    {id: 'third3'},
+    {id: 'third4'},
+    {id: 'third5'}
   ];
-  public fourth = [
-    {id:'fourth1'},
-    {id:'fourth2'},
-    {id:'fourth3'},
-    {id:'fourth4'}
-  ];
-  public fifth = [
-    {id:'fifth1'},
-    {id:'fifth2'},
-    {id:'fifth3'},
-    {id:'fifth4'}, 
-    {id:'fifth5'}
-  ];
-  public sixth = [
-    {id:'sixth1'},
-    {id:'sixth2'},
-    {id:'sixth3'},
-    {id:'sixth4'}, 
-    {id:'sixth5'}
-  ];
-  public coment = {id: 'coment', value:''};
+  public fourth = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  public fifth = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  public sixth = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   public srartColor = 'srartColor';
+  // tslint:disable-next-line:typedef
   onCheckColor(event){
-    this.srartColor = 'checkColor';
+    if (this.punkt1.statusBlock) {
+      this.punkt1.statusBlock = false;
+      this.srartColor = 'srartColor';
+    } else {
+      this.punkt1.statusBlock = true;
+      this.srartColor = 'checkColor';
+      this.frontCheck.isOff = true;
+    }
   }
+  // tslint:disable-next-line:typedef
   onCheckPunkt1(event){
-    this.punkt4.statusBlock = 'block';
+    if (this.punkt4.statusBlock) {
+      this.punkt4.statusBlock = false;
+    }
+    else {
+      this.punkt4.statusBlock = true;
+    }
   }
+  // tslint:disable-next-line:typedef
   onCheckPunkt2(event){
-    this.punkt2.statusBlock = 'block';
+    if (this.punkt2.statusBlock) {
+      this.punkt2.statusBlock = false;
+    }
+    else {
+      this.punkt2.statusBlock = true;
+    }
   }
+  // tslint:disable-next-line:typedef
   onCheckPunkt3(event){
-    this.punkt3.statusBlock = 'block';
+    if (this.punkt3.statusBlock) {
+      this.punkt3.statusBlock = false;
+    }
+    else {
+      this.punkt3.statusBlock = true;
+    }
+  }
+  // tslint:disable-next-line:typedef
+  onCheckPunkt4(event){
+      this.punkt5.statusBlock = true;
+  }
+  // tslint:disable-next-line:typedef
+  onCheckPunkt5(event){
+    this.punkt6.statusBlock = true;
   }
   constructor() { }
   ngOnInit(): void {

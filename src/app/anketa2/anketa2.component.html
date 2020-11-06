@@ -13,18 +13,18 @@
         <input [id]="dayData.id" type="date" >
         <p>***</p>
     </div>
-    <div [class]="punkt1.class">
+    <div [class]="punkt1.class" *ngIf="punkt1.statusBlock">
         <p>1. Чи вперше Ви звертаєтеся до нашого ценру?</p>
         <input [id]="first[0].id" type="checkbox" (click)="onCheckPunkt1($event)"/><label [for]="first[0].id">Так, вперше<span>(перехід до питання 4)</span></label>
         <input [id]="first[1].id" type="checkbox" (click)="onCheckPunkt2($event)"/><label [for]="first[1].id">Так, але раніше звертався до іншого центру системи БПД</label>
         <input [id]="first[2].id" type="checkbox"/><label [for]="first[2].id">Ні, не вперше</label>
     </div>
-    <div [class]="punkt2.class" [style.display]="punkt2.statusBlock">
+    <div [class]="punkt2.class" *ngIf="punkt2.statusBlock">
         <p>2. Якщо не вперше, чи Ви звертаєтеся з того свмого питання?</p>
         <input [id]="second[0].id" type="checkbox" (click)="onCheckPunkt3($event)"/><label [for]="second[0].id">Так</label>
         <input [id]="second[1].id" type="checkbox"(click)="onCheckPunkt1($event)"/><label [for]="second[1].id">Ні, маю нове питання (перехід до запитання 4)</label>
     </div>
-    <div [class]="punkt3.class" [style.display]="punkt3.statusBlock">
+    <div [class]="punkt3.class" *ngIf="punkt3.statusBlock">
         <p>3. Якщо ваша відповідь "так", то з чим це пов'язано:</p>
         <input [id]="third[0].id" type="checkbox"/><label [for]="third[0].id">Забув дещо / потрібно уточнити інформації</label><br>
         <input [id]="third[1].id" type="checkbox"/><label [for]="third[1].id">Потрібно принести документи</label><br>
@@ -34,29 +34,23 @@
     </div>
     <br>
     <br>
-    <div [class]="punkt4.class" [style.display]="punkt4.statusBlock">
-        <p>4. Наскільки легко Вам було потрапити до нашого ценрту?</p>
-        <input [id]="fourth[0].id" type="checkbox"/><label [for]="fourth[0].id">Легко (доступно)</label>
-        <input [id]="fourth[1].id" type="checkbox"/><label [for]="fourth[1].id">Скоріше легко, ніж ні</label>
-        <input [id]="fourth[2].id" type="checkbox"/><label [for]="fourth[2].id">Скоріше складно</label>
-        <input [id]="fourth[3].id" type="checkbox"/><label [for]="fourth[3].id">Складно</label><br>
-        <label [for]="coment.id">Прокоментуйте, будь ласка, свою відповідь</label><input [id]="coment.id" type="text"/>
+    <div [class]="punkt4.class" *ngIf="punkt4.statusBlock" (click)="onCheckPunkt4($event)">
+        <p>4. Наскільки легко Вам було потрапити до нашого ценрту?(від 1 до 10)</p>
+      <ul>
+        <li *ngFor="let point of fourth"><input [class]="question" type="checkbox"/>{{point}}</li>
+      </ul>
     </div>
-    <div [class]="punkt5.class" [style.display]="punkt5.statusBlock">
-        <p>5. Оцініть, будь ласка, якою мірою Ви загалом задоволені обслуговуванням у нашому центрі</p>
-        <input [id]="fifth[0].id" type="checkbox"/><label [for]="fifth[0].id">Дуже задоволений</label>
-        <input [id]="fifth[1].id" type="checkbox"/><label [for]="fifth[1].id">Задоволений</label>
-        <input [id]="fifth[2].id" type="checkbox"/><label [for]="fifth[2].id">І так і ні</label>
-        <input [id]="fifth[3].id" type="checkbox"/><label [for]="fifth[3].id">Не задоволений</label>
-        <input [id]="fifth[4].id" type="checkbox"/><label [for]="fifth[4].id">Вкрай не задоволений</label>
+    <div [class]="punkt5.class" *ngIf="punkt5.statusBlock" (click)="onCheckPunkt5($event)">
+      <p>5. Оцініть, будь ласка, якою мірою Ви загалом задоволені обслуговуванням у нашому центрі</p>
+      <ul>
+        <li *ngFor="let point of fifth"><input [class]="question" type="checkbox"/>{{point}}</li>
+      </ul>
     </div>
-    <div [class]="punkt6.class" [style.display]="punkt6.statusBlock">
-        <p>6. Чи було для Вас корисним відвідуванні центру?</p>
-        <input [id]="sixth[0].id" type="checkbox"/><label [for]="sixth[0].id">Так</label>
-        <input [id]="sixth[1].id" type="checkbox"/><label [for]="sixth[1].id">Скоріше так, ніж ні</label>
-        <input [id]="sixth[2].id" type="checkbox"/><label [for]="sixth[2].id">Скоріше ні, ніж так</label>
-        <input [id]="sixth[3].id" type="checkbox"/><label [for]="sixth[3].id">Ні</label>
-        <input [id]="sixth[4].id" type="checkbox"/><label [for]="sixth[4].id">Складно сказати</label>
+    <div [class]="punkt6.class" *ngIf="punkt6.statusBlock">
+        <p>6. Чи було для Вас корисним відвідуванні центру?(від 1 до 10)</p>
+      <ul>
+        <li *ngFor="let point of sixth"><input [class]="question" type="checkbox"/>{{point}}</li>
+      </ul>
     </div>
 
 </div>
